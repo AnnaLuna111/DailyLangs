@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>DailyLangs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <a href="index.html" class="header__logo">
+            <svg aria-hidden="true" focusable="true" width="223" height="43">
+              <use href="images/icons/stack.svg#logo"></use>
+            </svg>
+            <span class="visually-hidden">Логотип DailyLangs."</span>
+          </a>
+          <nav class="header__nav nav">
+            <button class="nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+              <span class="nav__button"></span>
+            </button>
+            <ul class="nav__list reset-list">
+              <li class="nav__item nav__item--current">
+                <a href="#">Курсы</a>
+              </li>
+              <li class="nav__item">
+                <a href="#">Статьи</a>
+              </li>
+              <li class="nav__item">
+                <a href="#">Вопросы</a>
+              </li>
+            </ul>
+            <button class="nav__button-search">
+              <span class="visually-hidden">Поиск</span>
+            </button>
+            <a class="nav__login"  href="#">
+              <span class="visually-hidden">Войти в личный кабинет</span>
+            </a>
+            <form class="nav__select" action="#" method="get">
+              <div class="nav__select-wrapper">
+                <select name="sort" id="lang" data-label="ru">
+                  <option value="ru">RU</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+            </form>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="main__container">
+          <section class="catalog">
+            <div class="catalog__wrapper">
+              <div class="catalog__box">
+                <form class="catalog__select select" action="#" method="get">
+                  <div class="select__wrapper">
+                    <select name="sort" id="sort" data-label="Язык">
+                      <option value="">Язык</option>
+                      <option value="english">Английский</option>
+                    </select>
+                  </div>
+                </form>
+                <button class="catalog__filter-toggle"></button>
+              </div>
+              <form class="catalog__filter" action="#" method="post">
+                <fieldset class="catalog__filter-group">
+                  <legend class="catalog__filter-title">Продолжительность</legend>
+                  <div class="catalog__range-slider" id="slider"></div>
+                </fieldset>
+                <fieldset class="catalog__filter-group">
+                  <legend class="catalog__filter-title">Сложность</legend>
+                  <ul class="catalog__filter-list reset-list">
+                    <li class="catalog__filter-item">
+                      <label>
+                        <input type="radio" name="difficulty" value="any" checked> Для всех
+                      </label>
+                    </li>
+                    <li class="catalog__filter-item">
+                      <label>
+                        <input type="radio" name="difficulty" value="begginer"> Для начинающих
+                      </label>
+                    </li>
+                    <li class="catalog__filter-item">
+                      <label>
+                        <input type="radio" name="difficulty" value="intermediate"> Продвинутый уровень
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="catalog__filter-group">
+                  <legend class="catalog__filter-title">Навыки</legend>
+                  <ul class="catalog__filter-list reset-list">
+                    <li class="catalog__filter-item">
+                      <label>
+                        <input type="checkbox" name="skills" value="grammar"> Грамматика
+                      </label>
+                    </li>
+                    <li class="catalog__filter-item">
+                      <label>
+                        <input type="checkbox" name="skills" value="lexion"> Лексика
+                      </label>
+                    </li>
+                    <li class="catalog__filter-item">
+                      <label>
+                        <input type="checkbox" name="skills" value="syntax"> Синтаксис
+                      </label>
+                    </li>
+                    <li class="catalog__filter-item">
+                      <label>
+                        <input type="checkbox" name="skills" value="phonetics"> Фонетика
+                      </label>
+                    </li>
+                    <li class="catalog__filter-item">
+                      <label>
+                        <input type="checkbox" name="skills" value="pointing"> Пунктуация
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </form>
+            </div>
+            <div class="catalog__wrapper">
+              <h1>Курсы <span class="catalog__title">английского&nbsp;языка</span></h1>
+              <ul class="catalog__list reset-list">
+                <li class="catalog__item item">
+                  <h2 class="item__title">Английский шаг за шагом:<br>Базовый уровень</h2>
+                  <div class="item__wrapper">
+                    <div class="item__tutor tutor">
+                      <span class="tutor__name">Полина&nbsp;Коваленко</span>
+                      <picture>
+                        <source type="image/webp" srcset="images/tutor-1@1x.webp 1x, images/tutor-1@2x.webp 2x">
+                        <img class="tutor__image" src="images/tutor-1@1x.png" srcset="images/tutor-1@2x.png 2x" width="213" height="225" alt="Фото преподавателя">
+                      </picture>
+                      <span class="tutor__lang"></span>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__info-wrapper">
+                        <span class="item__price">
+                          2940₽ 
+                        </span>
+                        <span class="item__sale">-51%</span>
+                      </div>
+                      <span class="item__old-price">
+                        6000₽
+                      </span>
+                      <a class="item__link" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog__item item">
+                  <h2 class="item__title">Английский шаг за шагом:<br>Базовый уровень</h2>
+                  <div class="item__wrapper">
+                    <div class="item__tutor tutor">
+                      <span class="tutor__name">Полина&nbsp;Коваленко</span>
+                      <picture>
+                        <source type="image/webp" srcset="images/tutor-1@1x.webp 1x, images/tutor-1@2x.webp 2x">
+                        <img class="tutor__image" src="images/tutor-1@1x.png" srcset="images/tutor-1@2x.png 2x" width="213" height="225" alt="Фото преподавателя">
+                      </picture>
+                      <span class="tutor__lang"></span>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__info-wrapper">
+                        <span class="item__price">
+                          2940₽ 
+                        </span>
+                        <span class="item__sale">-51%</span>
+                      </div>
+                      <span class="item__old-price">
+                        6000₽
+                      </span>
+                      <a class="item__link" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog__item item">
+                  <h2 class="item__title">Английский шаг за шагом:<br>Вводно-фонетический курс</h2>
+                  <div class="item__wrapper">
+                    <div class="item__tutor tutor">
+                      <span class="tutor__name">Полина&nbsp;Коваленко</span>
+                      <picture>
+                        <source type="image/webp" srcset="images/tutor-2@1x.webp 1x, images/tutor-2@2x.webp 2x">
+                        <img class="tutor__image" src="images/tutor-2@1x.png" srcset="images/tutor-2@2x.png 2x" width="213" height="225" alt="Фото преподавателя">
+                      </picture>
+                      <span class="tutor__lang"></span>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__info-wrapper">
+                        <span class="item__price">
+                          2940₽ 
+                        </span>
+                        <span class="item__sale">-51%</span>
+                      </div>
+                      <span class="item__old-price">
+                        6000₽
+                      </span>
+                      <a class="item__link" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog__item item">
+                  <h2 class="item__title">Английский шаг за шагом:<br>Вводно-фонетический курс</h2>
+                  <div class="item__wrapper">
+                    <div class="item__tutor tutor">
+                      <span class="tutor__name">Полина&nbsp;Коваленко</span>
+                      <picture>
+                        <source type="image/webp" srcset="images/tutor-2@1x.webp 1x, images/tutor-2@2x.webp 2x">
+                        <img class="tutor__image" src="images/tutor-2@1x.png" srcset="images/tutor-2@2x.png 2x" width="213" height="225" alt="Фото преподавателя">
+                      </picture>
+                      <span class="tutor__lang"></span>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__info-wrapper">
+                        <span class="item__price">
+                          2940₽ 
+                        </span>
+                        <span class="item__sale">-51%</span>
+                      </div>
+                      <span class="item__old-price">
+                        6000₽
+                      </span>
+                      <a class="item__link" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <ul class="footer__list reset-list">
+            <li>
+              <a href="#">Политика конфиденциальности</a>
+            </li>
+            <li>
+              <a href="#">Условия пользования</a>
+            </li>
+          </ul>
+          <a href="index.html" class="footer__logo">
+            <svg aria-hidden="true" focusable="true" width="223" height="43">
+              <use href="images/icons/stack.svg#logo"></use>
+            </svg>
+            <span class="visually-hidden">Логотип курсов английского языка DailyLangs."</span>
+          </a>
+        </div>
+        <div class="footer__container">
+          <p>© DailyLangs | 2023. Все права защищены</p>
+        </div>
+      </div>
+    </footer>
+    <script src="vendor/nouislider/nouislider.js"></script>
+    <script src="js/script.js" type="module"></script>
+  </body>
+</html>

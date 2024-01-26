@@ -1,0 +1,117 @@
+.item {
+  background-color: $color-heliotrope;
+  color: $color-default-white;
+
+  &__title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 800;
+    color: $color-paris-daisy;
+    z-index: 1000;
+
+    &::first-line {
+      color: $color-default-white;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tutor {
+    margin-left: -22px;
+    margin-bottom: -24px;
+    min-width: 213px;
+
+    @include vp-767 {
+      min-width: 187px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 100;
+  }
+
+  &__info-wrapper {
+    position: relative;
+  }
+
+  &__price {
+    align-self: flex-start;
+    margin-right: 60px;
+    margin-left: -22px;
+
+    font-size: 40px;
+    font-weight: 800;
+  }
+
+
+  &__sale{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    padding: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+
+    width: 48px;
+    height: 18px;
+    background-color: $color-brilliant-rose;
+    border-radius: 199px;
+  }
+
+  &__old-price {
+    position: relative;
+    margin-right: 30px;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: -3px;
+      transform: translateY(-50%);
+      content: "";
+      width: 65px;
+      height: 2px;
+      background-color: $color-brilliant-rose;
+    }
+  }
+
+  &__link {
+    position: relative;
+    margin-top: 37px;
+    padding-right: 23px;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background-color: $color-conifer;
+      mask: url('../../images/icons/stack.svg#icon-arrow') no-repeat center;
+    }
+
+    &:hover::after {
+      background-color: $color-default-white;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+}

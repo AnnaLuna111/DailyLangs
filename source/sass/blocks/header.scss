@@ -1,0 +1,30 @@
+.header {
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 43px 0;
+
+    @include vp-767 {
+      padding: 33px 0;
+    }
+  }
+
+  &__logo {
+    margin-right: auto;
+    color: $color-heliotrope;
+
+    svg {
+      display: block;
+
+      @include vp-767 {
+      width: 121px;
+      height: 37px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-brilliant-rose
+    }
+  }
+}

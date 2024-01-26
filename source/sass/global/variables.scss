@@ -1,0 +1,41 @@
+// Colors
+// ---------------------------------
+$color-default-black:       #000000;
+$color-default-white:       #ffffff;
+$color-default-gray:        #b8b8b8;
+
+$color-heliotrope:          #C05AFF;
+$color-paris-daisy:         #FFFD50;
+$color-brilliant-rose:      #FF50BA;
+$color-conifer:             #C9FF50;
+$color-electric-purple:     #AC25FF;
+
+// Typography
+// ---------------------------------
+
+$fz-default:                  18px;
+$ff-mulish:                   "Mulish", "Arial", sans-serif;
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                      320px;
+$vp-375:                      375px;
+$vp-768:                      768px;
+$vp-1024:                     1024px;
+$vp-1280:                     1280px;
+$vp-1440:                     1440px;
+$vp-1920:                     1920px;
+
+//Mixins
+@mixin vp-767 {
+    @media (max-width: ($vp-768 - 1px)) {
+      @content;
+    }
+}
+
+@mixin vp-768 {
+  @media (min-width: $vp-768) {
+    @content;
+  }
+}

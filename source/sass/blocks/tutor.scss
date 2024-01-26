@@ -1,0 +1,42 @@
+.tutor {
+  position: relative;
+  z-index: 100;
+
+  &__name {
+    position: absolute;
+    top: 16px;
+    left: 148px;
+    padding: 6px 18px 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-default-black;
+
+    background-color: $color-conifer;
+    border-radius: 60px;
+
+    &::before {
+      position: absolute;
+      top: 26px;
+      left: -14px;
+      content: "";
+      width: 21px;
+      height: 22px;
+      background: url('../../images/icons/stack.svg#icon-polygon') no-repeat center;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+    }
+  }
+
+  &__lang {
+    bottom: 12px;
+    right: 0;
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    background: url('../../images/lang.png') no-repeat center;
+    border-radius: 50%;
+  }
+}
